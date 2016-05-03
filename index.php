@@ -8,8 +8,7 @@
 <body>
 <div id="img"><center>
 	<img src="IMG_1756.jpg" alt="Em construção" align="center">
+	<img src="trezztel.png" align="center">
 </div></center>
 </body>
 </html>
-
-
