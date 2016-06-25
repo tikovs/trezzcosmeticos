@@ -6,7 +6,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Home | Corlate</title>
-	
 	<!-- core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -23,6 +22,31 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <!-- Bootstrap jQuery plugins compiled and minified -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/waypoints.js"></script>
+    <script src="js/waypoints-sticky.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+   //para remover o menu "grudado" é só comentar esta linha
+            $('.menu-stick').waypoint('sticky');
+
+    $('a[href^="#"]').on('click',function (e) {
+        e.preventDefault();
+
+         var target = this.hash,
+        $target = $(target);
+
+         $('html, body').stop().animate({ 'scrollTop': $target.offset().top }, 900, 'swing', function () {
+            window.location.hash = target;
+        });
+    });
+
+        });
+    </script>
 </head><!--/head-->
 
 <body class="homepage">
@@ -43,9 +67,10 @@
 				
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Empresa</a></li>
-                        <li><a href="about-us2.html">Produtos</a></li>
-                        <li><a href="contact-us2.html">Contato</a></li>                        
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="#content">Empresa</a></li>
+                        <li><a href="#recent-works">Produtos</a></li>
+                        <li><a href="#contact-info">Contato</a></li>                        
                     </ul>
                 </div>
             </div><!--/.container-->
@@ -55,19 +80,14 @@
 
     <section id="main-slider" class="no-margin">
         <div class="carousel slide">
-            <ol class="carousel-indicators">
-                <li data-target="#main-slider" data-slide-to="0" class="active"></li>
-                <li data-target="#main-slider" data-slide-to="1"></li>
-            </ol>
-            <div class="carousel-inner">
+            <div class="carousel-inner active">
 
                 <div class="item active" style="background-color: #f2f2f2">
                     <div class="container">
                         <div class="row slide-margin">
                             <div class="col-sm-6">
                                 <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">A empresa de cosméticos com qualidade mineira.</h1>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                                    <h1 class="animation animated-item-1">Produtos de alta qualidade com preço justo. </h1>
                                 </div>
                             </div>
 
@@ -76,27 +96,6 @@
                                     <img src="images/slider/img1.png" class="img-responsive">
                                 </div>
                             </div> 
-
-                        </div>
-                    </div>
-                </div><!--/.item-->
-
-                <div class="item" style="background-image: url(images/slider/bg2.jpg)">
-                    <div class="container">
-                        <div class="row slide-margin">
-                            <div class="col-sm-6">
-                                <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="images/slider/img2.png" class="img-responsive">
-                                </div>
-                            </div>
 
                         </div>
                     </div>
@@ -120,38 +119,27 @@
                         </div>
                     </div>
                 </div><!--/.item-->
-
-            </div><!--/.carousel-inner-->
         </div><!--/.carousel-->
-
-
-
-        <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
-            <i class="fa fa-chevron-left"></i>
-        </a>
-        <a class="next hidden-xs" href="#main-slider" data-slide="next">
-            <i class="fa fa-chevron-right"></i>
-        </a>
     </section><!--/#main-slider-->
-
     <section id="recent-works">
         <div class="container">
             <div class="center wow fadeInDown">
                 <h2>Produtos</h2>
-                <p class="lead">Todos os produtos da trezz cosméticos são fabricados por profissionais qualificados e fielmente testado.</p>
+                <p class="lead">Matéria prima de alta qualidade, embalagens e fragrâncias diferenciadas.</p>
             </div>
 
             <div class="row">
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/full/oleococo.png" alt="">
+                        <img class="img-responsive" src="images/portfolio/recent/gel_coco_corporal.png" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
-                                <h3><a href="#">Oléos de Coco Corporal - Fonte de Vitaminas E</a> </h3>
-                                <p>1- Formulação exclusiva com Alta Concentração de ativos - maior hidratação e proteção para pele </p>
-                                <p> 2- Aumenta elasticidade da pele - Prevenção de estrias </p>
+                                <h3><a href="#">Óleo de Coco Corporal</a> </h3>
+                                <p>1- Formulação exclusiva com Alta Concentração de ativos 
+                                    - maior hidratação e proteção para pele. </p>
+                                <p> 2- Aumenta elasticidade da pele - Prevenção de estrias .</p>
                                 <p> 3- Fragância suave e marcante.
-                                <a class="preview" href="images/portfolio/full/oleococo.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <a class="preview" href="images/portfolio/full/oleo_corporal.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Veja mais</a>
                             </div> 
                         </div>
                     </div>
@@ -159,14 +147,14 @@
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/full/oleococo.png" alt="">
+                        <img class="img-responsive" src="images/portfolio/recent/oleo_coco_capilar.png" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
-                                <h3><a href="#">Oléos de Coco Capilar - Fonte de Vitaminas E</a></h3>
+                                <h3><a href="#">Óleo de Coco Capilar</a></h3>
                                 <p>1- Formulação Exclusiva: maior absorção, nutre, recupera e reestrutura o fio.</p>
-                                <p>2- Hidatração intensa - diminuindo o Frizz</p>
-                                <p>3- Brilho e nutrição - cabelos sedosos e maleáveis </p>
-                                <a class="preview" href="images/portfolio/full/oleococo.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <p>2- Hidatração intensa - diminuindo o Frizz.</p>
+                                <p>3- Brilho e nutrição - cabelos sedosos e maleáveis.</p>
+                                <a class="preview" href="images/portfolio/full/oleo_capilar_atual.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Veja mais</a>
                             </div> 
                         </div>
                     </div>
@@ -175,14 +163,14 @@
             
                <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/full/oleococo.png" alt="">
+                        <img class="img-responsive" src="images/portfolio/recent/sabonete_andiroba.png" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
-                                <h3><a href="#">Oléos de Coco Corporal - Fonte de Vitaminas E</a> </h3>
-                                <p>1- Formulação exclusiva com Alta Concentração de ativos - maior hidratação e proteção para pele </p>
-                                <p> 2- Aumenta elasticidade da pele - Prevenção de estrias </p>
-                                <p> 3- Fragância suave e marcante.
-                                <a class="preview" href="images/portfolio/full/oleococo.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <h3><a href="#">Sabonete Líquido Andiroba</a> </h3>
+                                <p>1- Formulação exclusiva: maior rendimento.</p>
+                                <p>2- Espuma cremosa e fragrâncias marcantes.</p>
+                                <p>3- Ação hidratante, filme e protetor aumentando e sensação de suavidade e maciez nas mãos.</p>
+                                <a class="preview" href="images/portfolio/full/oleococo.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Veja mais</a>
                             </div> 
                         </div>
                     </div>
@@ -190,14 +178,14 @@
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/full/oleococo.png" alt="">
+                        <img class="img-responsive" src="images/portfolio/recent/sabonete_pitanga.png" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
-                                <h3><a href="#">Oléos de Coco Capilar - Fonte de Vitaminas E</a></h3>
-                                <p>1- Formulação Exclusiva: maior absorção, nutre, recupera e reestrutura o fio.</p>
-                                <p>2- Hidatração intensa - diminuindo o Frizz</p>
-                                <p>3- Brilho e nutrição - cabelos sedosos e maleáveis </p>
-                                <a class="preview" href="images/portfolio/full/oleococo.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <h3><a href="#">Sabonete Líquido Pitanga</a></h3>
+                                <p>1- Formulação exclusiva: maior rendimento.</p>
+                                <p>2- Espuma cremosa e fragrâncias marcantes.</p>
+                                <p>3- Ação hidratante, filme e protetor aumentando e sensação de suavidade e maciez nas mãos.</p>
+                                <a class="preview" href="images/portfolio/full/oleococo.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Veja mais</a>
                             </div> 
                         </div>
                     </div>
@@ -205,14 +193,13 @@
 
                    <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/full/oleococo.png" alt="">
+                        <img class="img-responsive" src="images/portfolio/recent/creme_crachos_atual.png" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
-                                <h3><a href="#">Oléos de Coco Corporal - Fonte de Vitaminas E</a> </h3>
-                                <p>1- Formulação exclusiva com Alta Concentração de ativos - maior hidratação e proteção para pele </p>
-                                <p> 2- Aumenta elasticidade da pele - Prevenção de estrias </p>
-                                <p> 3- Fragância suave e marcante.
-                                <a class="preview" href="images/portfolio/full/oleococo.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <h3><a href="#">Creme para pentear  Leite de Silicone </a> </h3>
+                                <p>1- Silicone aminofuncional que atua na superfície das fibras danificadas conferindo proteção, condicionamento e suavidade.  </p>
+                                <p> 2 Formulação exclusivas com 5 agentes condicionantes, cabelos mais leves. Proteção Térmica. </p>
+                                <a class="preview" href="images/portfolio/full/oleococo.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Veja mais</a>
                             </div> 
                         </div>
                     </div>
@@ -220,14 +207,13 @@
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/full/oleococo.png" alt="">
+                        <img class="img-responsive" src="images/portfolio/recent/creme_leite.png" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
-                                <h3><a href="#">Oléos de Coco Capilar - Fonte de Vitaminas E</a></h3>
-                                <p>1- Formulação Exclusiva: maior absorção, nutre, recupera e reestrutura o fio.</p>
-                                <p>2- Hidatração intensa - diminuindo o Frizz</p>
-                                <p>3- Brilho e nutrição - cabelos sedosos e maleáveis </p>
-                                <a class="preview" href="images/portfolio/full/oleococo.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <h3><a href="#">Creme para pentear Cachos definidos</a></h3>
+                                <p>1- Silicone aminofuncional que atua na superfície das fibras danificadas conferindo proteção.</p>
+                                <p>2- Alto condicionamento, valorizando os cachos. Fórmula leve para não deixar os cabelos com aspecto pesado.</p>
+                                <a class="preview" href="images/portfolio/full/oleococo.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Veja mais</a>
                             </div> 
                         </div>
                     </div>
@@ -236,14 +222,14 @@
 
                    <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/full/oleococo.png" alt="">
+                        <img class="img-responsive" src="images/portfolio/recent/gel_acao_prolongada.png" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
-                                <h3><a href="#">Oléos de Coco Corporal - Fonte de Vitaminas E</a> </h3>
-                                <p>1- Formulação exclusiva com Alta Concentração de ativos - maior hidratação e proteção para pele </p>
-                                <p> 2- Aumenta elasticidade da pele - Prevenção de estrias </p>
-                                <p> 3- Fragância suave e marcante.
-                                <a class="preview" href="images/portfolio/full/oleococo.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <h3><a href="#">Gel Ultra Fixação: Ação prolongada, sem formar “falsas caspas” no cabelo.</a> </h3>
+                                <p>1- Sem álcool</p>
+                                <p> 2- Agente condicionante</p>
+                                <p> 3- Formulação exclusiva, essência agradável.</p>
+                                <a class="preview" href="images/portfolio/full/oleococo.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Veja mais</a>
                             </div> 
                         </div>
                     </div>
@@ -251,14 +237,14 @@
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/full/oleococo.png" alt="">
+                        <img class="img-responsive" src="images/portfolio/recent/gel_cola.png" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
-                                <h3><a href="#">Oléos de Coco Capilar - Fonte de Vitaminas E</a></h3>
-                                <p>1- Formulação Exclusiva: maior absorção, nutre, recupera e reestrutura o fio.</p>
-                                <p>2- Hidatração intensa - diminuindo o Frizz</p>
-                                <p>3- Brilho e nutrição - cabelos sedosos e maleáveis </p>
-                                <a class="preview" href="images/portfolio/full/oleococo.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <h3><a href="#">Gel Cola: Fixação extrema, resistente a água.</a></h3>
+                                    <p>1- Sem álcool</p>
+                                <p> 2- Agente condicionante</p>
+                                <p> 3- Formulação exclusiva, essência agradável.</p>
+                                <a class="preview" href="images/portfolio/full/oleococo.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Veja mais</a>
                             </div> 
                         </div>
                     </div>
@@ -270,6 +256,53 @@
             </div><!--/.row-->
         </div><!--/.container-->
     </section><!--/#recent-works-->
+
+
+
+ <section id="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 wow fadeInDown">
+                   <div class="tab-wrap"> 
+                        <div class="media">
+                            <div class="parrent pull-left">
+                                <ul class="nav nav-tabs nav-stacked">
+                                    <li class="active"><a href="#tab1" data-toggle="tab" class="tehnical">Trezz Cosméitcos</a></li>
+                                    <li class=""><a href="#tab2" data-toggle="tab" class="tehnical">Missão</a></li>
+                                    <li class=""><a href="#tab3" data-toggle="tab" class="tehnical">Visão</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="parrent media-body">
+                                <div class="tab-content">
+
+                                  <div class="tab-pane fade active in" id="tab1">
+                                     <h2>Trezz Cosméticos</h2>
+                                                 <p>Trezz Cosméticos é uma empresa jovem, com espírito inovador trazendo para o mercado produtos de alta qualidade com preço justo ao consumidor.
+                                                 Focamos sempre na recompra dos consumidores, investimos em matéria prima de alta qualidade, assim como embalagens e fragrâncias diferenciadas.</p>
+                                     </div>
+                                     
+                                     <div class="tab-pane fade" id="tab2">
+                                      <h2>Missão (Razão para existir): </h2>
+                                        <p>Promover acesso a beleza, saúde e bem-estar as pessoas com produtos de qualidade e preço justo. Voltada para operação com bons processos, desenvolvendo as pessoas, aperfeiçoando produtos, sempre buscando rentabilidade que assegure crescimento da empresa, de nossos parceiros e colaboradores.</p>
+                                     </div>
+
+                                     <div class="tab-pane fade" id="tab3">
+                                        <h2>Visão: </h2>
+                                        <p>Buscar o reconhecimento dos produtos oferecidos e ampliar nossa participação no mercado brasileiro.</p>
+                                     </div>
+                                </div> <!--/.tab-content-->  
+                            </div> <!--/.media-body--> 
+                        </div> <!--/.media-->     
+                    </div><!--/.tab-wrap-->               
+                </div><!--/.col-sm-6-->
+
+
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/#content-->
+
+
 
     <section id="contact-info">
         <div class="center">                
