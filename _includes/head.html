@@ -90,7 +90,12 @@
                          <li> 
                      {% endif  %} 
                        <a href="/index.html">Home</a></li>
-                        <li><a href="#content">Empresa</a></li>
+                     {% if page.url == '/about-us.html'  %} 
+                        <li class="active">
+                     {% else  %} 
+                         <li> 
+                     {% endif  %} 
+                        <a href="/about-us.html">Empresa</a></li>
                      {% if page.url == '/products.html' %} 
                             <li class="active">
                      {% else  %} 
