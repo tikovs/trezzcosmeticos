@@ -359,7 +359,9 @@ input.search-form:hover {
 /*************************
 *******Home Page******
 **************************/
-
+.cortexto {
+  color: #f3fcff;
+}
 
 #main-slider {
   position: relative;
@@ -371,7 +373,7 @@ input.search-form:hover {
 }
 
 #main-slider .carousel .carousel-content {
-  margin-top: 150px;
+  margin-top: 450px;
 }
 
 #main-slider .carousel .slide-margin{
@@ -2525,7 +2527,22 @@ shortcodes page css
 }
 
 
+.batom1 {
+  background: #996666;
+  height: 20px;
+  width: 20px;  
+  border: none;
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+}
 
-
+.batom2 {
+  background: #663333;
+  height: 20px;
+  width: 20px;  
+  border: none;
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+}
 
 
