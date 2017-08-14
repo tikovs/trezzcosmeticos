@@ -363,6 +363,10 @@ input.search-form:hover {
   color: #f3fcff;
 }
 
+.testemunha{
+  background-color: rgba(222, 230, 230, 0.03);
+}
+
 #main-slider {
   position: relative;
 }
