@@ -68,3 +68,11 @@ jQuery(function($) {'use strict',
 		social_tools: false
 	});	
 });
+
+
+function changeImage(nome){
+
+document.getElementById('myImg').src='images/batons/'+nome+'.JPG';
+document.getElementById('nomeBatom').innerText=  "Toda "+ nome;
+
+}
