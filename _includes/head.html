@@ -50,22 +50,22 @@
     <!-- Bootstrap jQuery plugins compiled and minified -->
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
+        //    $(document).ready(function () {
    //para remover o menu "grudado" é só comentar esta linha
-            $('.menu-stick').waypoint('sticky');
+     //       $('.menu-stick').waypoint('sticky');
 
-    $('a[href^="#"]').on('click',function (e) {
-        e.preventDefault();
+   //     $('a[href^="#"]').on('click',function (e) {
+     //       e.preventDefault();
 
-         var target = this.hash,
-        $target = $(target);
+    //         var target = this.hash,
+ //           $target = $(target);
 
-         $('html, body').stop().animate({ 'scrollTop': $target.offset().top }, 900, 'swing', function () {
-            window.location.hash = target;
-        });
-    });
-
-        });
+ //            $('html, body').stop().animate({ 'scrollTop': $target.offset().top }, 900, 'swing', function () {
+  //              window.location.hash = target;
+   //         });
+ //       });
+//    
+   //         });
     </script>
 </head><!--/head-->
 
