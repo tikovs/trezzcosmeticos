@@ -76,3 +76,12 @@ document.getElementById('myImg').src='images/batons/'+nome+'.JPG';
 document.getElementById('nomeBatom').innerText=  "Toda "+ nome;
 
 }
+
+
+function changeImage2(nome){
+
+document.getElementById('myImg2').src='images/batons/'+nome+'.JPG';
+document.getElementById('nomeBatom2').innerText=  "Toda "+ nome;
+
+}
+
